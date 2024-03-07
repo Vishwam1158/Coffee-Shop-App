@@ -9,6 +9,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -30,17 +32,32 @@ fun App_Preview() {
 @Preview
 @Composable
 fun App() {
+    val selectedRoute = remember {
+        mutableStateOf(Routes.MenuPage.route)
+    }// for rendering the app when user is changing the current selection
+
     Scaffold(
         topBar = {
             TopAppBar(title = { AppTitle() })
 
         },
+        content = {
+            when(selectedRoute.value) {
+                Routes.MenuPage.route -> Text(text = "It's a Menu")
+                Routes.OffersPage.route -> OffersPage()
+                Routes.OrderPage.route -> Text(text = "It's a Order Page")
+                Routes.InfoPage.route -> Text(text = "It's a Info page")
+            }
+        },
         bottomBar = {
-            Text(text = "Bottom bar")
+            NavBar(
+                selectedRoute = selectedRoute.value,
+                onChange = { // here it is route of the screen that user wants
+                    selectedRoute.value = it
+                }
+            )
         }
-    ) {
-        OffersPage()
-    }
+    )
 }
 
 
