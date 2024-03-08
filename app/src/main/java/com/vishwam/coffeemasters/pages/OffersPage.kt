@@ -1,4 +1,4 @@
-package com.vishwam.coffeemasters
+package com.vishwam.coffeemasters.pages
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,13 +22,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.vishwam.coffeemasters.R
 import com.vishwam.coffeemasters.ui.theme.Alternative2
 
-//@Preview(showBackground = true, widthDp = 400)
-//@Composable
-//private fun Offer_Preview(){
-//    Offer(title = "My Title 1", descrepition = "This is a discription")
-//}
 
 @Preview(showBackground = true)
 @Composable
@@ -84,21 +81,3 @@ fun Offer(title: String, description: String) {
     }
 }
 
-
-// This below code is only for style references.
-//@Preview(showBackground = true, WidthDp = 400 )
-//@Composable
-//fun style(){
-//    Column(
-//        modifier = Modifier.padding(16.dp),
-//        horizontalAlignment = Alignment.CenterHorizontally
-//    ) {
-//        Text(text = "Title",
-//            style = MaterialTheme.typography.titleLarge,
-//            fontWeight = FontWeight.Bold,
-//            modifier = Modifier.background(Color.Cyan))
-//
-//        Spacer(modifier = Modifier.height(16.dp)) // usally for margin
-//
-//    }
-//}
