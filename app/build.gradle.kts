@@ -51,6 +51,15 @@ android {
 }
 
 dependencies {
+    // Retrofit - Network call for loading data and imges through web APIs like something
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    // OkHttp
+    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.12")
+    // JSON Converter - Json to Kotlin object mapping
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    // AsyncImage - Image loading (image will be finding from the json file data )
+    implementation("io.coil-kt:coil-compose:2.6.0")
+
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
