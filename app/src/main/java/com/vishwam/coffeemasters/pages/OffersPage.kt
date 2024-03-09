@@ -33,10 +33,10 @@ fun OffersPage() {
     ) {
         Offer(title = "Early Coffee", description = "10% off. Offer valid from 6am to 9am.")
         Offer(title = "Welcome Gift", description = "25% off on your first order.")
-        Offer(title = "Welcome Gift", description = "25% off on your first order.")
-        Offer(title = "Early Coffee", description = "10% off. Offer valid from 6am to 9am.")
-        Offer(title = "Welcome Gift", description = "25% off on your first order.")
-        Offer(title = "Welcome Gift", description = "25% off on your first order.")
+        Offer(title = "Welcome Gift", description = "50% off on your Ice-Coffee order.")
+        Offer(title = "Welcome Gift", description = "50% off on your Hot-Coffee order..")
+        Offer(title = "Reorder Gift", description = "50% off on your Second order.")
+        Offer(title = "Monday Offer", description = "Buy two Get One free")
     }
 
 }
